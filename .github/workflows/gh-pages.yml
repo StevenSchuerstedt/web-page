@@ -22,4 +22,3 @@ jobs:
         HUGO_VERSION: 0.84.2
         TARGET_REPO: StevenSchuerstedt/StevenSchuerstedt.github.io
         TOKEN: ${{ secrets.HUGO_TOKEN }}
-        HUGO_ARGS: '-t tanka'
