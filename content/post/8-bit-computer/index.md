@@ -3,6 +3,7 @@ title: 8-Bit Computer
 author: admin
 type: page
 date: 2020-04-18T14:52:38+00:00
+featured_image: "8bit.jpg"
 
 ---
 Der Computer ist wohl unbestreitbar eine der einflussreichsten Erfindungen der Menschheit. Zum Zeitpunkt der Erstellung dieses Artikels wird der Computer in allen Lebensbereichen verwendet und bietet eine enorme Hilfe um Tätigkeiten zu automatisieren und zu digitalisieren, bzw. durch den Computer erhalten diese Begriffe überhaupt eine Bedeutung. Bei meiner täglichen Arbeit mit dem Computer stellt sich mir die Frage, wie dieses Gerät genau funktioniert. Ich gehöre zu einer Generation in der die Computertechnologie schon seit meiner Kindheit weit fortgeschritten war und ich den Entwicklungsprozess des Computers, von mechanischen Rechenmaschinen zu winzigen Mikroprozessoren nicht verfolgen konnte. Für mich war der Computer einfach so da und Veränderungen gab es nur in der Schnelligkeit des Rechners und vor allem mit dem Internet. 
