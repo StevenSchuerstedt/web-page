@@ -17,8 +17,9 @@ Wichtigstes Bauteil für einen modernen Computer ist der Transistor, der im Prin
 Interessant ist auch der Gedanke das ein Computer prinzipiell völlig unabhängig von der Elektronik funktioniert. Die Idee des Computers, also die einzelnen Logik-Gatter oder Flip-Flops haben erstmal nichts mit Strom oder ähnlichen zu tun, sondern sind einfach abstrakte Ideen die sich mit allen möglichen Dingen praktisch umsetzten lassen. Die ersten Computer wurden komplett mechanisch konstruiert (siehe Baggage Differenzmaschine) und es ist z.B. einfach möglich aus LEGO Steinen ein ODER Gatter zu konstruieren. Die Frage ist immer wie der Input/Output interpretiert werden soll, also wie 1 und 0 dargestellt wird. In der Elektronik ist es Strom an/Strom aus, in anderen Bereichen können andere Dinge dafür herangezogen werden. Klar ist auch das sich die Elektronik und Strom als praktische Umsetzung für die Idee des Computers durchgesetzt hat, da es enorm viele Vorteile gegenüber anderer Techniken gibt. Vor allem die extreme Verkleinerung der Bauteile mit einer gleichzeitig enormen Geschwindigkeit ermöglicht den Computer seine volle Macht erst zu entfalten. <figure class="wp-block-image size-large">
 
 
-![8bit](/8bit.jpg)
-![BUS](/bus.png)
+{{< figure src="/bus.png" title="Architecture" width="100%" >}}
+
+{{< figure src="/8bit.jpg" title="8Bit" width="100%" >}}
 ## Die Clock / Taktsignal
 
 Die Clock gibt allen anderen Komponenten des Computers ein periodische Signal weiter, so das alle Aufgaben entsprechend synchronisiert ablaufen können. Viele ICs haben ein extra Pin für ein Clock Signal, das dann ein bestimmtes Verhalten auslöst. 

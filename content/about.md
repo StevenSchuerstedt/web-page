@@ -7,3 +7,5 @@ author = "Steven Schürstedt"
 +++
 
 I'm a computer science student at KIT. 
+
+Contact me at steven@schuerstedt.com
