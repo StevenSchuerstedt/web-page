@@ -13,7 +13,7 @@ StevieJump is a fast paced jump&#8217;n&#8217;run&#8217;n&#8217;gun game. The go
 I programmed Stevie Jump during the summer semester of the year 2020. The idea was to use my programming skills to create an application of my own completly from scratch. I started with an empty visual studio project and worked my way up using c++, openGL and many other libraries. 
 
 <div style="text-align: center">
-<a href="/setup.exe">
+<a href="/setup.zip">
 <button>
 Download Game
 </button>
