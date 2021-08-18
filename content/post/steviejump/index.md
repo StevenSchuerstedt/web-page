@@ -12,23 +12,18 @@ StevieJump is a fast paced jump&#8217;n&#8217;run&#8217;n&#8217;gun game. The go
 
 I programmed Stevie Jump during the summer semester of the year 2020. The idea was to use my programming skills to create an application of my own completly from scratch. I started with an empty visual studio project and worked my way up using c++, openGL and many other libraries. 
 
-<p class="has-text-align-left">
-  Leaderboard:
-</p>
+<div style="text-align: center">
+<a href="/setup.exe">
+<button>
+Download Game
+</button>
+</a>
 
-<p class="has-text-align-center">
-  <strong>Download the game here</strong>
-</p>
-
-<p class="has-text-align-center">
-  Dependencies: OpenSSL
-</p>
-
-<div class="button_cont">
-   <a class="example_d" href="">
-    {{ i18n "CTAbutton"}}
-   </a>
 </div>
+Dependencies: OpenSSL
+
+**LeaderBoard**
+<iframe src="https://steven.schuerstedt.com/steviejump/board.html" title="Leaderboard" width="350" height="210" frameborder="0"></iframe>
 
 
 {{< figure src="/sJ_ingame.png" title="ingame" width="100%" >}}

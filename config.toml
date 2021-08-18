@@ -11,6 +11,9 @@ theme = "tanka"
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [menu]
 
   [[menu.main]]
