@@ -7,17 +7,28 @@ featured_image: cpu.jpg
 published: true
 ---
 
-test change
-Designing and implementing a CPU using the Basys-3 FPGA. 
+MicroStevie is the implementation of a OISC (= One instruction set computer) CPU using the Basys-3 FPGA and verilog. 
 
-OISC (= One instruction set computer)
-There is only one instruction needed for universal computation (=> Turing complete)
+How many instructions does a computer need to be turing complete? CISC Architectures like Intel x86 have thousand of different instructions, but what is the bare minimun needed for computation?
+As is turns out there is only one instruction needed for universal computation. This kind of architectures are called OISC and there are alot of different ways to design this one instruction. In this example I choosed the SUBLEQ instruction.
+
+SUBLEQ => subtract and branch if equal or less
+SUBLEQ(A, B, C)
+
+RAM[B] = RAM[B] - RAM[A]
+if(RAM[B] <= 0)
+ goto C
+
+
+To be fair this instruction is actually combining three instructions, subtract, store in memory and conditional jump. All other OISC instruction are built in a similar way.
+
+With a OISC we save a lot of hardware, since we dont need any decode mechanism, there is only one instruction anyways, so the processor always knows what to execute. The only thing that changes are the parameters. 
+
+The OISC architecture is a good (or maybe quite extreme) example of the relationship and interchangeability between hardware and software. Every algorithm can be implemented in hardware directly, or in software using simpler hardware mechanisms (equality of hardware and software). 
+With the OISC architecture we choose to minimize and simplify the hardware to the extreme. There is nothing we can remove from the hardware without making it loosing core functionality (turing completness). But this simplicity of the hardware comes with a price, now the sofware is much more complicated. Writing a simple "add" or "multiply" programm requires a lot of thought from the programmer, and many lines of code using just the SUBLEQ instruction. So what we actually did is just to shift the complexity from hardware to software. The art in computer architecture (or in life) is to find a good balance between these two (harware/software, body/mind?).
 
 A von Neumann execution Model (data and instructions are in memory, sequential program execution)
 
-For Example: SUBLEQ => subtract and branch if equal or less
-
-SUBLEQ(A, B, C)
 
 ==> lets introduce some terminology
 
