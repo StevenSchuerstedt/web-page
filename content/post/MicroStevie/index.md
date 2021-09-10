@@ -2,12 +2,12 @@
 title: MicroStevie
 author: admin
 type: page
-date: 2021-08-18T06:56:38+00:00
-featured_image: "cpu.jpg"
-
+date: {}
+featured_image: cpu.jpg
+published: true
 ---
 
-
+test change
 Designing and implementing a CPU using the Basys-3 FPGA. 
 
 OISC (= One instruction set computer)
