@@ -8,21 +8,51 @@
                     <div class="markdown">
                         {{ partial "content" . }}
                     </div>
-
                     <div class="mx-0 mx-md-4 posts">
-                        <h1>Sections</h1>
-                        <ul>
-                            {{ range sort .Pages "Title" "asc" }}
-                                <li>
-                                    <a href="{{ .Permalink }}"><span>{{ .Title }}</span></a>
-                                </li>
-                            {{ end }}
-                        </ul>
+                        
+						
+						
+                     <ul class="list-unstyled">
+						{{ range sort .Pages "Title" "asc" }}
+							<li>
+	
+	
+								<table style="border-collapse: collapse; width: 100%; height: 17px;" border="0">
+									<tbody>
+										<tr style="height: 17px;">
+											<td style="width: 20%; height: 17px;">
+												<a href="#" class="image featured">{{if isset .Params "featured_image" }}<img src="{{ index .Params "featured_image" }}" width="100" heigh="100"></a>{{ end }}
+											</td>
+												<td style="width: 80%; height: 17px;">
+													<h2 class="meta-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+														<div class="meta-date">
+															<time>{{ .Date.Format (.Site.Params.dateform | default "2006/01/02") }}</time>
+														</div>
+												</td>
+										</tr>
+									</tbody>
+								</table>
+				
+				
+       
+		
+		
+    </li>
+	
+    {{ end }}
+</ul>
+						
+						
+						
                     </div>
+					
+					
                 </div>
             </div>
         </div>
     </div>
+	
+	
 
     {{ partial "footer" . }}
 {{ end }}

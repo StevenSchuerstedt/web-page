@@ -1,5 +1,5 @@
 <ul class="list-unstyled">
-    {{ range .Data.Pages.ByDate.Reverse }}
+    {{ range where .Data.Pages "Section" "post" }}
     <li>
 	
 	
