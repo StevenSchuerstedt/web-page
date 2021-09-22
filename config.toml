@@ -21,6 +21,7 @@ unsafe = true
     name = "About"
     url = "/about/"
     weight = 10
+	
 
 [taxonomies]
 category = "categories"
@@ -39,12 +40,17 @@ series = "series"
     name = "Home"
     url = "/"
     weight = 1
+	
+  [[menu.primary]]
+    name = "Sketches"
+    url = "/sketches/"
+    weight = 2
+	
 [[menu.primary]]
     name = "About"
     url = "/about/"
-    weight = 2
-
-
+    weight = 3
+	
 [privacy]
 
   [privacy.vimeo]
