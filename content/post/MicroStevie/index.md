@@ -2,7 +2,7 @@
 title: MicroStevie
 author: admin
 type: page
-date: 2021-08-01T14:52:38+00:00
+date: {}
 featured_image: cpu.jpg
 published: true
 ---
@@ -36,10 +36,13 @@ code: https://github.com/StevenSchuerstedt/MicroStevie
 ### lets introduce some terminology
 
 address space (total number of addressable entrys of RAM): 2^8, 256
-addressability (how many bits in each location): 16
-word size (size of one operand the alu can operate on): 16 
+
+addressability (how many bits in each location): 24
+
+word size (size of one operand the alu can operate on): 24 
+
 instructions: 1
-registers: program counter, instruction register,  
+
 
 ![](https://github.com/StevenSchuerstedt/MicroStevie/blob/main/images/architecture_topLevel.png)
 
@@ -73,18 +76,21 @@ For our OISC we only need the alu to do subtraction. thats pretty easy. Also the
 Simple counter
 
 ## Control Logic
-every module has control- and data signals. The control logic is the heart of the cpu. It controls the flow of the modules, so they all can work together. 
-control signals are stored in memory, microprogrammed
-Fetch cycle, execution cycle
+The control logic is the heart of the cpu. It controls the flow of the modules, so they all can work together. 
+
+Fetch Cycle - fetch the next operands from the RAM into the IR
+
+Execution Cycle - execute the SUBLEQ instruction
 
 ## Registers
-Two general purpose registers, tied directly to the alu A and B. A memory address register and a instruction register. 
+Two general purpose registers A and B 24 bits wide, tied directly into the ALU. 
 
-### MicroStevie Architecture
-- ProgrammCounter, with jump cabability
-- ALU, capable of Subtraction
-- some branching mechanism, maybe flags?
-- some registers
+A memory address register for the 8 bit address of the RAM.
+
+A instruction register to hold the 24 bit "instruction" (because OISC, only operands), aka three 8 bit operands.
+
+A flags register for the less or equal than 0 flag.
+
 
 ### Input/Output
 only output for the beginning. Input is implicit by programming ram directly when initializing the fpga. 
@@ -92,4 +98,4 @@ Output would be possible with specific command, or by using a specific address i
 Memory mapped Output. Have a specific address in ram always be displayed at the 7-segment. This way the subleq instruction alone is sufficient for output.
 
 ### Speedup
-Pipelining, Multithreading
+Pipelining, Multithreading, Interrupts
