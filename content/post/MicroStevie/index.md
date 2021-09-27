@@ -98,6 +98,6 @@ Output would be possible with specific command, or by using a specific address i
 Memory mapped Output. Have a specific address in ram always be displayed at the 7-segment. This way the subleq instruction alone is sufficient for output.
 
 ### Speedup
-Pipelining, Multithreading, Interrupts
+Pipelining, Multithreading, Interrupts, vga output, programm the system on itself
 
 This project took roughly ~3 months
