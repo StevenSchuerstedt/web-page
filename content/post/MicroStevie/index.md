@@ -99,3 +99,5 @@ Memory mapped Output. Have a specific address in ram always be displayed at the 
 
 ### Speedup
 Pipelining, Multithreading, Interrupts
+
+This project took roughly ~3 months
