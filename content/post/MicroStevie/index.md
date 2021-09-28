@@ -89,7 +89,7 @@ There exist several techniques to improve the microarchitecture implementation o
 This requires independence of the instructions, something which is not always guaranteed. So the hardware gets more complicated to handle these cases. 
 
 #### increase functionality
-Pipelining, Multithreading, Interrupts, vga output, programm the system on itself
+There can be added more hardware to the computer, output hardware like a monitor with vga, or output hardware like keyboards. For a monitor one needs to decide how to interface with the hardware, so there could be some memory cells to address specific pixels on the monitor. For input there has to be some sort of interrupt routine, so the control logic can react to an input event. Currently MicroStevie hast to be programmed by writing directly into the ram, a next step would be to let the system program itself, so use the more advanced input and output mechanis to write a program using MicroStevie and execute it on itself.
 
 This project took roughly ~3 months
 
