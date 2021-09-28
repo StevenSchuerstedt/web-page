@@ -94,6 +94,9 @@ mem[X] <= 24'hAABBCC;
 Where AA, BB and CC are hex values of the operands for the SUBLEQ instruction. 
 
 #### fibonacci
+
+The fibonacci numbers are calculated in mem[100]
+
  mem[0] <= 24'h110e01;
  
  mem[1] <= 24'h0e1000;
