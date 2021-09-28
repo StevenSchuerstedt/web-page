@@ -81,7 +81,17 @@ MicroStevie can only output the result of the computation. Input is implicit by 
 For output I decided for memory-mapped i/o, so only the SUBLEQ instruction is sufficienct for output. 
 I decided memory address 100 is always written to the seven segment display of the fpga.
 
+### Speedup
+Pipelining, Multithreading, Interrupts, vga output, programm the system on itself
+
+This project took roughly ~3 months
+
 ### some programs
+The programs are of the form 
+
+mem[X] <= 24'hAABBCC;
+
+Where AA, BB and CC are hex values of the operands for the SUBLEQ instruction. 
 
 #### fibonacci
  mem[0] <= 24'h110e01;
@@ -120,9 +130,117 @@ I decided memory address 100 is always written to the seven segment display of t
  
  mem[17] <= 1;
 
-####primes 
+#### primes 
 
-### Speedup
-Pipelining, Multithreading, Interrupts, vga output, programm the system on itself
+mem[0] <= 24'h676707;
 
-This project took roughly ~3 months
+mem[1] <= 24'h67670a;
+
+mem[2] <= 24'h68651e; //check if result in 65 is 0 or negative
+
+mem[3] <= 24'h676714; // => number is divisable
+
+mem[4] <= 24'h676704; //hlt
+
+mem[5] <= 24'h6a6406; // => number is not divisable, test next divisor
+
+//increase tested number by 1
+
+mem[20] <= 24'h6b6c15; 
+
+mem[21] <= 24'h656516; //clear 65
+
+//mem[21] <= 24'h676716; //clear 65
+
+mem[22] <= 24'h6c6517; //copy number to 65
+
+mem[23] <= 24'h6d6518; //add one
+
+mem[24] <= 24'h6b6b19; //clear 
+
+mem[25] <= 24'h6c6c1a;
+
+//reset divisor to two
+
+mem[26] <= 24'h66661b; //clear
+
+mem[27] <= 24'h6e661c; //load 2
+
+mem[28] <= 24'h676700;
+
+//increase divisor by 1
+
+mem[30] <= 24'h6b6c1f; 
+
+mem[31] <= 24'h656520; //clear 65
+
+mem[32] <= 24'h6c6521; //copy number to 65
+
+mem[33] <= 24'h6b6b22; //clear 
+
+mem[34] <= 24'h6c6c23;
+
+mem[35] <= 24'h686624; //increase divisor by one
+
+mem[36] <= 24'h656c25; 
+
+mem[37] <= 24'h6c6b26; //copy number again to 6b
+
+mem[38] <= 24'h6c6c27; //clear 6c 
+
+mem[39] <= 24'h666b32; //if branch is taken number is prime
+
+mem[40] <= 24'h6b6b00; //clear 6b and jump back
+
+
+//number is prime
+
+mem[50] <= 24'h656c33;
+
+mem[51] <= 24'h646434; //clear output
+
+mem[52] <= 24'h6c6435; //output number
+
+mem[53] <= 24'h6c6c36; //clear 6c
+
+mem[54] <= 24'h6d6537; //add one to number
+
+mem[55] <= 24'h666638;
+
+mem[56] <= 24'h6e6639; //reset divisor to two
+
+mem[57] <= 24'h676700; //repeat from begining
+       
+//copy number
+
+mem[7] <= 24'h656c08;
+
+mem[8] <= 24'h6c6b09;
+
+mem[9] <= 24'h6c6c0a; //clear 6c
+
+mem[10] <= 24'h666502;
+
+mem[11] <= 24'h676701;
+
+mem[101] <= 2; //number to be tested
+
+mem[102] <= 2; //divisor
+
+mem[103] <= 0; //always 0 to branch
+
+mem[104] <= -1; //always -1 to add one
+
+mem[105] <= -1;
+
+mem[106] <= -2;
+
+mem[107] <= 0; //6b - hold copy of number to test
+
+mem[108] <= 0; //6c
+
+mem[109] <= -1; //6d - add one to number to test
+
+mem[110] <= -2; //always -2 to reset divisor
+
+
