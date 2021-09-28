@@ -59,22 +59,6 @@ The basic components are:
 
 The basic computing procedure is very simple, the MicroStevie CPU fetches (loads) the correct instruction from RAM (according to program counter), this instruction is placed in the insruction register and then gets executed. The results are written back into the RAM and the next instruction is fetched. 
 
-## RAM 
-standard RAM with write enable and output enable control signals and some address and data lines. Implemented in a Verilog Module. 
-=> Write and test all modules seperatly
-
-=> fixed stupid ram bug, reading values from ram and initalizing ram works 
-initialize ram with software
-byte addresable etc?
-address space: total number of addressable entrys, e.g. 2^address size
-addressability: how many bits in each location
-
-## ALU
-word size? what is the size of one operand the alu can operate on? 
-For our OISC we only need the alu to do subtraction. thats pretty easy. Also there needs to be a way to indicate if the value is <= 0, so we need a flags mechanism for that.
-## Program Counter
-Simple counter
-
 ## Control Logic
 The control logic is the heart of the cpu. It controls the flow of the modules, so they all can work together. 
 
@@ -93,9 +77,13 @@ A flags register for the less or equal than 0 flag.
 
 
 ### Input/Output
-only output for the beginning. Input is implicit by programming ram directly when initializing the fpga. 
-Output would be possible with specific command, or by using a specific address in memory. 
-Memory mapped Output. Have a specific address in ram always be displayed at the 7-segment. This way the subleq instruction alone is sufficient for output.
+MicroStevie can only output the result of the computation. Input is implicit by programming the ram directly when initializing the fpga. 
+For output I decided for memory-mapped i/o, so only the SUBLEQ instruction is sufficienct for output. 
+I decided memory address 100 is always written to the seven segment display of the fpga.
+
+### some programs
+
+
 
 ### Speedup
 Pipelining, Multithreading, Interrupts, vga output, programm the system on itself
