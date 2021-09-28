@@ -33,6 +33,8 @@ With the OISC architecture we choose to minimize and simplify the hardware to th
 code: https://github.com/StevenSchuerstedt/MicroStevie
 
 
+
+
 ### lets introduce some terminology
 
 address space (total number of addressable entrys of RAM): 2^8, 256
