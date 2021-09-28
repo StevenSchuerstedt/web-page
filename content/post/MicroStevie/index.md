@@ -83,7 +83,44 @@ I decided memory address 100 is always written to the seven segment display of t
 
 ### some programs
 
+#### fibonacci
+ mem[0] <= 24'h110e01;
+ 
+ mem[1] <= 24'h0e1000;
+ 
+ mem[2] <= 24'h0f0f03;
+ 
+ mem[3] <= 24'h646404;
+ 
+ mem[4] <= 24'h100f05;
+ 
+ mem[5] <= 24'h0f6406;
+ 
+ mem[6] <= 24'h0e0e07;
+ 
+ mem[7] <= 24'h100e08;
+ 
+ mem[8] <= 24'h0e1109;
+ 
+ mem[9] <= 24'h0f0f0a;
+ 
+ mem[10] <= 24'h64640b;
+ 
+ mem[11] <= 24'h110f0c;
+ 
+ mem[12] <= 24'h0f640d;
+ 
+ mem[13] <= 24'h0e0e00;
+    
+ mem[14] <= 0; 
+ 
+ mem[15] <= 0; 
+ 
+ mem[16] <= 0; 
+ 
+ mem[17] <= 1;
 
+####primes 
 
 ### Speedup
 Pipelining, Multithreading, Interrupts, vga output, programm the system on itself
