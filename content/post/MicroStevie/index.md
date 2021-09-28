@@ -81,7 +81,12 @@ MicroStevie can only output the result of the computation. Input is implicit by 
 For output I decided for memory-mapped i/o, so only the SUBLEQ instruction is sufficienct for output. 
 I decided memory address 100 is always written to the seven segment display of the fpga.
 
-### Speedup
+### Future Work
+#### increase speed
+There exist several techniques to improve the microarchitecture implementation of an instruction set. Most important today are **Pipelining** and **Superscalar**. These techniques increase the throughput of instructions, by using the hardware in a really efficient way. When one instruction is executed the next one will already be fetched at the same time, or multiple instructions are executed at the same time.
+This requires independence of the instructions, something which is not always guaranteed. So the hardware gets more complicated to handle these cases. 
+
+#### increase functionality
 Pipelining, Multithreading, Interrupts, vga output, programm the system on itself
 
 This project took roughly ~3 months
@@ -134,6 +139,8 @@ The fibonacci numbers are calculated in mem[100]
  mem[17] <= 1;
 
 #### primes 
+
+The prime numbers are calculated in mem[100]. Including my comments for programming. 
 
 mem[0] <= 24'h676707;
 
