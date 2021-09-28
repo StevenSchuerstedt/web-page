@@ -2,7 +2,7 @@
 title: MicroStevie
 author: admin
 type: page
-date: {}
+date: 2021-09-28T14:52:38+00:00
 featured_image: cpu.jpg
 published: true
 ---
@@ -32,7 +32,7 @@ With the OISC architecture we choose to minimize and simplify the hardware to th
 
 code: https://github.com/StevenSchuerstedt/MicroStevie
 
-
+{{< figure src="/microStevie.png" title="MicroStevie" width="100%" >}}
 
 
 ### lets introduce some terminology
