@@ -2,10 +2,10 @@
 title: SteviePhysics
 author: admin
 type: page
-date: 2021-04-14T14:34:04+00:00
+date: {}
 draft: false
 private: true
-
+published: true
 ---
 Simple Physik Engine für 2D. Nicht für Spiele bzw. interaktive Echtzeitanwendungen sondern einfach nur viel Physik. Gute Möglichkeit um die physikalischen Formel in der &#8220;Praxis&#8221; auszuprobieren. 
 
@@ -115,7 +115,7 @@ Ziehe Zufallszahl zwischen Intervallgrenzen und nähere Integral an. Integralgre
 
 #### Schiefer Wurf als Zwei-Körperproblem
 
-=> zwei körperproblem, keplerbahn
+Eine weitere mögliche Erweiterung ist es den schiefen Wurf als Zwei-Körper Problem zu betrachten. Nach unseren Vorstellungen der Physik wirkt die Gravitation in beide Richtungen, d.h. unser Wurfgeschoss wird von der Erde (oder einen anderen Planeten) angezogen, aber genauso wird auch die Erde von unseren Wurfgeschoss angezogen. Natürlich unterscheiden sich die beiden Massen enorm, wodurch dieser Effekt kaum zum Tragen kommt. Wenn man diese beidseitige Anziehung als Differenzialgleichungen formuliert und auflöst, kommt man zu den Keplerbahnen, welche eine Ellipse darstellen. Kepler hatte dieses Problem bei der Gravitation von Planeten untereinander untersucht, hier sind die Massen natürlich wesentlich näher zusammen. Genau genommen ist ein Zwei-Körperproblem immer noch zu eng gefasst, unser Wurfgeschoss wird ja eigentlich nicht nur von der Erde angezogen, sondern auch von der Sonne (und allen anderen Objekten im Universum, die Gravitation hört laut Theorie nie auf). Doch beim Drei-Körper-Problem gibt es schon keine Lösung mehr der Differentialgleichungen, und das ganze verfällt schnell in ein chaotisches System.
 
 #### Jetzt wird gependelt 
 
