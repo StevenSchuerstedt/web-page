@@ -133,6 +133,8 @@ Für kleine Winkel kann der sinus als gute Annäherung weggelassen werden und di
 
 $$ \theta = \theta_0 \cos{\frac{g}{l} t} $$
 
+Diese Gleichung kann jetzt als Pendelsimulation verwendet werden, aber natürlich muss die Koordinate `$\theta$` noch in die Koordinaten x und y zurücktransformiert werden, wie oben beschrieben, da ja unser Bildschirm rechteckig ist und somit letztlich nur kartesische Koordinaten versteht. 
+
 Lagrange-Mechanik (Pendel, beispiel für Schiefer Wurf?)
 
 => keine Reibung mit Lagrange (Was ist Reibung?)
