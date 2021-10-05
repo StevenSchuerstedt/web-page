@@ -2,10 +2,10 @@
 title: SteviePhysics
 author: admin
 type: page
-date: 2021-04-14T14:34:04+00:00
+date: {}
 draft: false
 private: true
-
+published: true
 ---
 Simple Physik Engine für 2D. Nicht für Spiele bzw. interaktive Echtzeitanwendungen sondern einfach nur viel Physik. Gute Möglichkeit um die physikalischen Formel in der &#8220;Praxis&#8221; auszuprobieren. 
 
@@ -115,15 +115,25 @@ Ziehe Zufallszahl zwischen Intervallgrenzen und nähere Integral an. Integralgre
 
 #### Schiefer Wurf als Zwei-Körperproblem
 
-=> zwei körperproblem, keplerbahn
+Eine weitere mögliche Erweiterung ist es den schiefen Wurf als Zwei-Körper Problem zu betrachten. Nach unseren Vorstellungen der Physik wirkt die Gravitation in beide Richtungen, d.h. unser Wurfgeschoss wird von der Erde (oder einen anderen Planeten) angezogen, aber genauso wird auch die Erde von unseren Wurfgeschoss angezogen. Natürlich unterscheiden sich die beiden Massen enorm, wodurch dieser Effekt kaum zum Tragen kommt. Wenn man diese beidseitige Anziehung als Differenzialgleichungen formuliert und auflöst, kommt man zu den Keplerbahnen, welche eine Ellipse darstellen. Kepler hatte dieses Problem bei der Gravitation von Planeten untereinander untersucht, hier sind die Massen natürlich wesentlich näher zusammen. Genau genommen ist ein Zwei-Körperproblem immer noch zu eng gefasst, unser Wurfgeschoss wird ja eigentlich nicht nur von der Erde angezogen, sondern auch von der Sonne (und allen anderen Objekten im Universum, die Gravitation hört laut Theorie nie auf). Doch beim Drei-Körper-Problem gibt es schon keine Lösung mehr der Differentialgleichungen, und das ganze verfällt schnell in ein chaotisches System.
 
 #### Jetzt wird gependelt 
 
-Das Fadenpendel, zum Einstieg wieder mit einfacher Gewichtskraft und mit ohne Reibung. Da unsere Masse an einem Faden hängt, wird ein Teil der Gewichtskraft, abhängig von der aktuellen Position, kompensiert.
+Das Fadenpendel, zum Einstieg wieder mit einfacher Gewichtskraft und mit ohne Reibung. Auf die Masser wirkt wieder die Gewichtskraft, aber durch den Faden wird ein Teil der Gewichtskraft durch die Gegenkraft des Fadens kompensiert. Wenn wir den Kraftvektor der Gewichtskraft in einen Radial und einen Tangentialteil aufteilen, dann wird der Radialteil vollständig vom Faden kompensiert und nur die Tangentialekraft spielt für die Bewegung eine Rolle. Hier eignen sich nun Polarkoordinaten, da dann eine Koordinate eleminiert werden kann. (genau die Radiale eben)
 
-<img loading="lazy" src="https://steven.schuerstedt.com/wp-content/ql-cache/quicklatex.com-1b7f06297748984e524cd08e5e055343_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#109;&#92;&#100;&#100;&#111;&#116;&#123;&#120;&#125;&#40;&#116;&#41;&#32;&#61;&#32;&#45;&#109;&#103;&#32;&#92;&#115;&#105;&#110;&#32;&#40;&#92;&#102;&#114;&#97;&#99;&#123;&#120;&#40;&#116;&#41;&#125;&#123;&#108;&#125;&#41;" title="Rendered by QuickLaTeX.com" height="25" width="173" style="vertical-align: -6px;" /> 
+$$ x = r \cos{\theta}$$
+$$ y = r \ sin{\theta}$$
 
-Für kleine Winkel kann der sinus weggelassen werden und die dann einfachere Gleichung kann mit einem Exponential Ansatz oder den sinus/cosinus Funktionen gelöst werde. So wie die Gleichung hier dasteht, kann sie nicht analytisch gelöst werden.
+Mit der neuen Koordinate `$\theta$` können wir jetzt die Bewegungsgleichung mit der Tangentialkraft formulieren.
+
+$$ \ddot{\theta} = - \frac{g}{l} \sin{\theta} $$
+Wobei `$l$`die Länge des Fadens ist. 
+
+Für kleine Winkel kann der sinus als gute Annäherung weggelassen werden und die dann einfachere Gleichung kann mit einem Exponential Ansatz oder den sinus/cosinus Funktionen gelöst werden. So wie die Gleichung eigentlich lautet führt die Lösung auf elliptische Integrale, die dann keine explizite Lösung haben, sondern sich z.B. als unendlich Reihe annähern lassen. 
+
+$$ \theta = \theta_0 \cos{\frac{g}{l} t} $$
+
+Diese Gleichung kann jetzt als Pendelsimulation verwendet werden, aber natürlich muss die Koordinate `$\theta$` noch in die Koordinaten x und y zurücktransformiert werden, wie oben beschrieben, da ja unser Bildschirm rechteckig ist und somit letztlich nur kartesische Koordinaten versteht. 
 
 Lagrange-Mechanik (Pendel, beispiel für Schiefer Wurf?)
 

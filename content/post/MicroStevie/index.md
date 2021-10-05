@@ -2,7 +2,7 @@
 title: MicroStevie
 author: admin
 type: page
-date: 2021-09-28T14:52:38+00:00
+date: 2021-04-14T14:34:04+00:00
 featured_image: cpu.jpg
 published: true
 ---
@@ -103,7 +103,7 @@ Where AA, BB and CC are hex values of the operands for the SUBLEQ instruction.
 #### fibonacci
 
 The fibonacci numbers are calculated in mem[100]
-
+```stan
  mem[0] <= 24'h110e01;
  
  mem[1] <= 24'h0e1000;
@@ -139,11 +139,11 @@ The fibonacci numbers are calculated in mem[100]
  mem[16] <= 0; 
  
  mem[17] <= 1;
-
+```
 #### primes 
 
 The prime numbers are calculated in mem[100]. Including my comments for programming. 
-
+```stan
 mem[0] <= 24'h676707;
 
 mem[1] <= 24'h67670a;
@@ -254,5 +254,4 @@ mem[108] <= 0; //6c
 mem[109] <= -1; //6d - add one to number to test
 
 mem[110] <= -2; //always -2 to reset divisor
-
-
+```
