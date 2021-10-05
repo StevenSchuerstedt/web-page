@@ -119,7 +119,7 @@ Eine weitere mögliche Erweiterung ist es den schiefen Wurf als Zwei-Körper Pro
 
 #### Jetzt wird gependelt 
 
-Das Fadenpendel, zum Einstieg wieder mit einfacher Gewichtskraft und mit ohne Reibung. Da unsere Masse an einem Faden hängt, wird ein Teil der Gewichtskraft, abhängig von der aktuellen Position, kompensiert.
+Das Fadenpendel, zum Einstieg wieder mit einfacher Gewichtskraft und mit ohne Reibung. Auf die Masser wirkt wieder die Gewichtskraft, aber durch den Faden wird ein Teil der Gewichtskraft durch die Gegenkraft des Fadens kompensiert. Wenn wir den Kraftvektor der Gewichtskraft in einen Radial und einen Tangentialteil aufteilen, dann wird der Radialteil vollständig vom Faden kompensiert und nur die Tangentialekraft spielt für die Bewegung eine Rolle. Hier eignen sich nun Polarkoordinaten, da dann eine Koordinate elemeniert werden kann. (genau die Radiale eben)
 
 <img loading="lazy" src="https://steven.schuerstedt.com/wp-content/ql-cache/quicklatex.com-1b7f06297748984e524cd08e5e055343_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#109;&#92;&#100;&#100;&#111;&#116;&#123;&#120;&#125;&#40;&#116;&#41;&#32;&#61;&#32;&#45;&#109;&#103;&#32;&#92;&#115;&#105;&#110;&#32;&#40;&#92;&#102;&#114;&#97;&#99;&#123;&#120;&#40;&#116;&#41;&#125;&#123;&#108;&#125;&#41;" title="Rendered by QuickLaTeX.com" height="25" width="173" style="vertical-align: -6px;" /> 
 
