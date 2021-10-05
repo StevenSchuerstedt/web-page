@@ -119,12 +119,19 @@ Eine weitere mögliche Erweiterung ist es den schiefen Wurf als Zwei-Körper Pro
 
 #### Jetzt wird gependelt 
 
-Das Fadenpendel, zum Einstieg wieder mit einfacher Gewichtskraft und mit ohne Reibung. Auf die Masser wirkt wieder die Gewichtskraft, aber durch den Faden wird ein Teil der Gewichtskraft durch die Gegenkraft des Fadens kompensiert. Wenn wir den Kraftvektor der Gewichtskraft in einen Radial und einen Tangentialteil aufteilen, dann wird der Radialteil vollständig vom Faden kompensiert und nur die Tangentialekraft spielt für die Bewegung eine Rolle. Hier eignen sich nun Polarkoordinaten, da dann eine Koordinate elemeniert werden kann. (genau die Radiale eben)
+Das Fadenpendel, zum Einstieg wieder mit einfacher Gewichtskraft und mit ohne Reibung. Auf die Masser wirkt wieder die Gewichtskraft, aber durch den Faden wird ein Teil der Gewichtskraft durch die Gegenkraft des Fadens kompensiert. Wenn wir den Kraftvektor der Gewichtskraft in einen Radial und einen Tangentialteil aufteilen, dann wird der Radialteil vollständig vom Faden kompensiert und nur die Tangentialekraft spielt für die Bewegung eine Rolle. Hier eignen sich nun Polarkoordinaten, da dann eine Koordinate eleminiert werden kann. (genau die Radiale eben)
 
 $$ x = r \cos{\theta}$$
 $$ y = r \ sin{\theta}$$
 
-Für kleine Winkel kann der sinus weggelassen werden und die dann einfachere Gleichung kann mit einem Exponential Ansatz oder den sinus/cosinus Funktionen gelöst werde. So wie die Gleichung hier dasteht, kann sie nicht analytisch gelöst werden.
+Mit der neuen Koordinate `$\theta$` können wir jetzt die Bewegungsgleichung mit der Tangentialkraft formulieren.
+
+$$ \ddot{\theta} = - \frac{g}{l} \sin{\theta} $$
+Wobei `$l$`die Länge des Fadens ist. 
+
+Für kleine Winkel kann der sinus als gute Annäherung weggelassen werden und die dann einfachere Gleichung kann mit einem Exponential Ansatz oder den sinus/cosinus Funktionen gelöst werden. So wie die Gleichung eigentlich lautet führt die Lösung auf elliptische Integrale, die dann keine explizite Lösung haben, sondern sich z.B. als unendlich Reihe annähern lassen. 
+
+$$ \theta = \theta_0 \cos{\frac{g}{l} t} $$
 
 Lagrange-Mechanik (Pendel, beispiel für Schiefer Wurf?)
 
