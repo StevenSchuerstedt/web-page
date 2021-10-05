@@ -46,10 +46,15 @@ series = "series"
     url = "/sketches/"
     weight = 2
 	
+  [[menu.primary]]
+    name = "Ideas"
+    url = "/ideas/"
+    weight = 3
+	
 [[menu.primary]]
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 4
 	
 [privacy]
 
