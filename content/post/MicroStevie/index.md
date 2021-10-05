@@ -2,7 +2,7 @@
 title: MicroStevie
 author: admin
 type: page
-date: {}
+date: 2021-04-14T14:34:04+00:00
 featured_image: cpu.jpg
 published: true
 ---
