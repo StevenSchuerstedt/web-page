@@ -2,7 +2,7 @@
 title: SteviePhysics
 author: admin
 type: page
-date: {}
+date: 2021-04-14T14:34:04.000Z
 draft: false
 private: true
 published: true
@@ -127,7 +127,7 @@ $$ y = r \ sin{\theta}$$
 Mit der neuen Koordinate `$\theta$` können wir jetzt die Bewegungsgleichung mit der Tangentialkraft formulieren.
 
 $$ \ddot{\theta} = - \frac{g}{l} \sin{\theta} $$
-Wobei `$l$`die Länge des Fadens ist. 
+Wobei `$l$` die Länge des Fadens ist. 
 
 Für kleine Winkel kann der sinus als gute Annäherung weggelassen werden und die dann einfachere Gleichung kann mit einem Exponential Ansatz oder den sinus/cosinus Funktionen gelöst werden. So wie die Gleichung eigentlich lautet führt die Lösung auf elliptische Integrale, die dann keine explizite Lösung haben, sondern sich z.B. als unendlich Reihe annähern lassen. 
 
