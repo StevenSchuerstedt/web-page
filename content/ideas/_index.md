@@ -12,3 +12,5 @@ some ideas I want to follow sometime
 ### How did Scriabin compose?
 
 ### Unreal Engine, Blender
+
+### How does a webbrowser work?
