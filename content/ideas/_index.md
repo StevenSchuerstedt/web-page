@@ -14,3 +14,5 @@ some ideas I want to follow sometime
 ### Unreal Engine, Blender
 
 ### How does a webbrowser work?
+
+### Ludwig Wittgenstein
