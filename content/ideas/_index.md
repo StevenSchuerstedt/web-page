@@ -16,3 +16,7 @@ some ideas I want to follow sometime
 ### How does a webbrowser work?
 
 ### Ludwig Wittgenstein
+
+### Ganzheitliche Klavierschule (Theorie, Geschichte, Komposition,...)
+
+### neue Art von Bildung überhaupt
