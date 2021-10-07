@@ -17,6 +17,8 @@ some ideas I want to follow sometime
 
 ### Ludwig Wittgenstein
 
+### Turing, Gödel, Halteproblem, Unvollständigkeitsatz
+
 ### Ganzheitliche Klavierschule (Theorie, Geschichte, Komposition,...)
 
 ### neue Art von Bildung überhaupt
