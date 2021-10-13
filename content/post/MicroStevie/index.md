@@ -2,7 +2,7 @@
 title: MicroStevie
 author: admin
 type: page
-date: 2021-04-14T14:34:04+00:00
+date: {}
 featured_image: cpu.jpg
 published: true
 ---
@@ -255,3 +255,5 @@ mem[109] <= -1; //6d - add one to number to test
 
 mem[110] <= -2; //always -2 to reset divisor
 ```
+
+When dealing with the fpga and programming a CPU I often thought about the reasons and advantages of building a processor first, and then programming the actual problem I would like to solve. For example I could use the fpga (or some basic hardware components) to directly create the fibonacci sequence or the prime numbers, and it would be arguably be less work than to first create a CPU and then programm these things with the CPU. Because what is the CPU actually doing? Well it does nothing on its own and when I want it do to something I need a program and also some input / output mechanisms. When I want it to solve another problem I need to code another program, the same way I would need to build some new hardware. So what is the advantage of building a layer of abstraction first? At first glance it is a lot of more work than to just solve the problem directly. I could build a CPU, then program a Operating System (which also really does nothing on its own), invent a programming language, a compiler etc. just to display the fibonacci numbers, something I could have achieved much simpler by just doing it directly. The power of abstraction is the pushing of limits. When I do everything in hardware directly I am limited by the means the hardware provides me. When I want to solve another problem I might not have the necessary hardware components ready. By using a layer of abstraction (like CPU) these limits almost vanish, the more I move up the ladder. I could still run out of memory if my program requires alot of space, so I would need to get more hardware, but I would argure its more unlikely and there are more things my CPU can do. But there are also limits in the way I solve the problem. With hardware components I am limited to solve my problem in the way the hardware (the physical reality) defines itselve (e.g. logic gates) but when I build a layer of abstraction I can define my own language of solving problems. I can invent a ISA or a programming language, so I can decide how the tools I use for solving my problems should look like. But still I am not completly free in my choices of tools, the logic gates are still kinda present in the sequential progression of a program.  
