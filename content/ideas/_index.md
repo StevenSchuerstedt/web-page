@@ -24,3 +24,5 @@ some ideas I want to follow sometime
 ### neue Art von Bildung überhaupt
 
 ### Audio Library in C++
+
+### lets paint
