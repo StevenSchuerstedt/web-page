@@ -22,3 +22,5 @@ some ideas I want to follow sometime
 ### Ganzheitliche Klavierschule (Theorie, Geschichte, Komposition,...)
 
 ### neue Art von Bildung überhaupt
+
+### Audio Library in C++
