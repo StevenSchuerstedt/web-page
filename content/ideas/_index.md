@@ -27,4 +27,4 @@ some ideas I want to follow sometime
 
 ### lets paint
 
-### create own origami
+### create own origami (box pleating, https://abrashiorigami.com/)
