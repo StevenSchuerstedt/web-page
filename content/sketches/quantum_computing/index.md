@@ -62,3 +62,11 @@ $$\left(\begin{array}{c} p_0 \cr p_1 \end{array}\right) \otimes \left(\begin{arr
 Now there can be a state of a two-Qubit system, that can not be decomposed as a tensor product of two seperate Qubits. This state is said to be entagled. In classical computation no entaglement is possible.
 
 - TODO: fix image, example for entaglement, bloch sphere describtion of qubits
+
+$$ \left| \phi^+ \right> = \frac{1}{\sqrt{2}} (\left| 00 \right> + \left| 11 \right>) = \left(\begin{array}{c} \frac{1}{\sqrt{2}} \cr 0 \cr 0 \cr \frac{1}{\sqrt{2}} \end{array}\right) $$
+ => one of four bell states (maximum quantum entaglement, cannot be explained with classical theories, localism or realism has to be given up) 
+
+- Reason for only reversible Quantum Gates? Because entagled state information loss would change things?
+What happens if the NAND Gate is applied to the bell state?
+
+$$\begin{pmatrix} 0 & 0 & 0 & 1 \cr 1 & 1  & 1 & 0\end{pmatrix} \left(\begin{array}{c} \frac{1}{\sqrt{2}} \cr 0 \cr 0 \cr \frac{1}{\sqrt{2}} \end{array}\right) = \left(\begin{array}{c} \frac{1}{\sqrt{2}} \cr \frac{1}{\sqrt{2}}  \end{array}\right) $$
