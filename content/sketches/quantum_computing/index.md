@@ -78,18 +78,18 @@ $$ p_1 = e^{i\phi}\sin{\frac{\theta}{2}} $$
 #### Example
 Consider the two states:
 
-$$\ket{\psi_0} = \frac{1}{\sqrt{2}}\left(\begin{array}{c} 1 \cr 1 \end{array}\right) $$
-$$\ket{\psi_1} = \frac{1}{\sqrt{2}}\left(\begin{array}{c} 1 \cr -1 \end{array}\right) $$
+$$\ket{+} = \frac{1}{\sqrt{2}}\left(\begin{array}{c} 1 \cr 1 \end{array}\right) $$
+$$\ket{-} = \frac{1}{\sqrt{2}}\left(\begin{array}{c} 1 \cr -1 \end{array}\right) $$
 
 These two states have the same probability to measure state `$\ket{0}$` or state `$\ket{1}$` (50%). But they differ in the relative phase. The representation on the bloch sphere is:
 
-$$\ket{\psi_0} = \cos{\frac{\pi}{4}}\ket{0} + \sin{\frac{\pi}{4}\ket{1}} $$
-$$\ket{\psi_1} = \cos{\frac{\pi}{4}}\ket{0} - \sin{\frac{\pi}{4}\ket{1}} $$
+$$\ket{+} = \cos{\frac{\pi}{4}}\ket{0} + \sin{\frac{\pi}{4}\ket{1}} $$
+$$\ket{-} = \cos{\frac{\pi}{4}}\ket{0} - \sin{\frac{\pi}{4}\ket{1}} $$
 
 To make the relative phase more clear we can write
 
-$$\ket{\psi_0} = \cos{\frac{\pi}{4}}\ket{0} + e^{i0}\sin{\frac{\pi}{4}\ket{1}} $$
-$$\ket{\psi_1} = \cos{\frac{\pi}{4}}\ket{0} + e^{i\pi}\sin{\frac{\pi}{4}\ket{1}} $$
+$$\ket{+} = \cos{\frac{\pi}{4}}\ket{0} + e^{i0}\sin{\frac{\pi}{4}\ket{1}} $$
+$$\ket{-} = \cos{\frac{\pi}{4}}\ket{0} + e^{i\pi}\sin{\frac{\pi}{4}\ket{1}} $$
 (since `$e^{i\pi} = -1$`)
 
 Now it is clear that the two states have same probabilites (as you can see with `$\theta$`), but different relative phases, in fact they are completly different direction. So when applying the hadarmard gate, these two states have different results. Also thats the reason why applying the hadarmard gate two times in a row cancel itself out. (phase interference)
@@ -116,6 +116,18 @@ TODO:
 - how to compute phi in general case?
 $$a + bi$$
 $$\phi = \arcsin(\frac{b}{\sin{\arcsin{\sqrt{a^2+b^2}}}})$$
+- measure in a different base to show the phase difference of first example?
+
+#### Measuring
+- measure with respect to z axis (so 0 or 1)
+- measure with respect to x axis (so + or -)
+Information could be encoded in both ways, but not both at the same time
+qiskit only allows measuring in the z basis (so rotate qubits instead of measuring device)
+
+
+=> heisenberg uncertainty principle
+Z^2 + X^2 <= 1
+
 
 #### two Qubit System
 A two Qubit system is the tensor product between two Qubits, so in general
@@ -133,3 +145,17 @@ $$ \left| \phi^+ \right> = \frac{1}{\sqrt{2}} (\left| 00 \right> + \left| 11 \ri
 What happens if the NAND Gate is applied to the bell state?
 
 $$\begin{pmatrix} 0 & 0 & 0 & 1 \cr 1 & 1  & 1 & 0\end{pmatrix} \left(\begin{array}{c} \frac{1}{\sqrt{2}} \cr 0 \cr 0 \cr \frac{1}{\sqrt{2}} \end{array}\right) = \left(\begin{array}{c} \frac{1}{\sqrt{2}} \cr \frac{1}{\sqrt{2}}  \end{array}\right) $$
+
+
+#### Deutsch's Algorithm
+- represent non-reversible function reversible
+- use of ancilla bits (XORed together in the end)
+
+#### Quantum Advantage
+simulation of quantum computers
+
+what is the power of quantum computing?
+=> entaglement? interference?
+
+Gottesman–Knill Theorem
+=> shows what operations you need to use full potential of quantum computing
