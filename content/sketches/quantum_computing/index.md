@@ -25,7 +25,7 @@ $$\ket{0} = \left(\begin{array}{c} 1 \cr 0 \end{array}\right)$$
 
 $$\ket{1} = \left(\begin{array}{c} 0 \cr 1 \end{array}\right)$$
 
-The tensor product between some one bit states can be written as `$\ket{0} \otimes \ket{1}$` or in short just `$\ket{01}$`. So the four different combinations of a two bit system are `$\ket{00}$`, `$\ket{01}$`, `$\ket{10}$`and `$\ket{11}$`, or `$\ket{0}$`, `$\ket{1}$`, `$\ket{2}$`, `$\ket{3}$`
+The tensor product between some one bit states can be written as `$\ket{0} \otimes \ket{1}$` or in short just `$\ket{0}\ket{1}$`. So the four different combinations of a two bit system are `$\ket{00}$`, `$\ket{01}$`, `$\ket{10}$`and `$\ket{11}$`, or `$\ket{0}$`, `$\ket{1}$`, `$\ket{2}$`, `$\ket{3}$`
 
 #### Logic Gates as linear operators
 
@@ -146,10 +146,37 @@ What happens if the NAND Gate is applied to the bell state?
 
 $$\begin{pmatrix} 0 & 0 & 0 & 1 \cr 1 & 1  & 1 & 0\end{pmatrix} \left(\begin{array}{c} \frac{1}{\sqrt{2}} \cr 0 \cr 0 \cr \frac{1}{\sqrt{2}} \end{array}\right) = \left(\begin{array}{c} \frac{1}{\sqrt{2}} \cr \frac{1}{\sqrt{2}}  \end{array}\right) $$
 
+### phase kickback
+Phase kickback can occur in controlled two-qubit gates, and describes the kickback of the eigenvalue to the control qubit. 
+
+If the target qubit is in an eigenstate of the gate and the control qubit is in a superposition (so not only the global phase will be changed), the eigenvalue is kicked back to the control qubit (axiom of tensor product).
+
+Consider a CNOT gate.
+What is a CNOT Gate doing? "standard" representation is only an arbitrary choice, what is it actually doing? (no idea..) "Control" and "Target" is not really meaningfull
+- everything is described in standard basis
+
+$$CNOT = \begin{pmatrix} 1 & 0 & 0 & 0 \cr 0 & 0 & 0 & 1 \cr  0 & 0 & 1 & 0 \cr 0 & 1 & 0 & 0\end{pmatrix} $$
+$$CNOT \ket{1}\ket{0} = \ket{1}\ket{1}$$
+$$CNOT \ket{+}\ket{-} = \ket{-}\ket{-}$$
+
+The CNOT gate flippes the "target" bit in the standard basis, but flips the "control" bit in the hadamard basis. 
+
+When the controll qubit is in a superposition and the target qubit is the eigenstate of the controlled-gate, then phase kickback takes place.
+
+So lets assume `$\ket{\psi}$` is a eigenstate of an arbitrary controlled-gate (by 1) (unitary matrix) `$U$` and the controll bit is in an arbitrary superposition.
+
+$$ U ((p_0 \ket{0} + p_1 \ket{1})\ket{\psi}) = U (p_0 \ket{0}\ket{\psi} + p_1 \ket{1}\ket{\psi}) = (p_0 U\ket{0}\ket{\psi} + p_1 U\ket{1}\ket{\psi}) = (p_0 \ket{0}\ket{\psi} + p_1 e^{i\phi}\ket{1}\ket{\psi}) =  (p_0 \ket{0} + p_1 e^{i\phi} \ket{1})\ket{\psi}$$
+
 
 #### Deutsch's Algorithm
 - represent non-reversible function reversible
 - use of ancilla bits (XORed together in the end)
+
+- the idea: uses phase kickback to kick back eigenvalue of target qubit to control qubit (since target qubit is in an eigenstate of Uf)
+
+- the target qubit is in eigenstate `$\ket{-}$` of `$U_f$` with eigenvalue `$-1^{f(x)}$`. 
+- eigenvalue is encoded in phase of controll qubit using phase kickback
+- final hadamard gate collapses phase to basis states `$f(0) XOR f(1)$`
 
 #### Quantum Advantage
 simulation of quantum computers
@@ -159,3 +186,9 @@ what is the power of quantum computing?
 
 Gottesman–Knill Theorem
 => shows what operations you need to use full potential of quantum computing
+
+its probably not difficult to design a quantum algorithm, but to let it be faster than a classical (need to use special quantum effects, but how?)
+
+everett many worlds interpretation
+=> quantum parallelism by using computing power from alternate realities
+=> quatum computing speedup prove for this theory?
