@@ -155,7 +155,7 @@ Consider a CNOT gate.
 What is a CNOT Gate doing? "standard" representation is only an arbitrary choice, what is it actually doing? (no idea..) "Control" and "Target" is not really meaningfull
 - everything is described in standard basis
 
-$$CNOT = \begin{pmatrix} 1 & 0 & 0 & 0 \cr 0 & 0 & 0 & 1 \cr  0 & 0 & 1 & 0 \cr 0 & 1 & 0 & 0\end{pmatrix} $$
+$$CNOT = \begin{pmatrix} 1 & 0 & 0 & 0 \cr 0 & 1 & 0 & 0 \cr  0 & 0 & 0 & 1 \cr 0 & 0 & 1 & 0\end{pmatrix} $$ (check little endian vs big endian, which bit is control/target?)
 $$CNOT \ket{1}\ket{0} = \ket{1}\ket{1}$$
 $$CNOT \ket{+}\ket{-} = \ket{-}\ket{-}$$
 
@@ -177,6 +177,8 @@ $$ U ((p_0 \ket{0} + p_1 \ket{1})\ket{\psi}) = U (p_0 \ket{0}\ket{\psi} + p_1 \k
 - the target qubit is in eigenstate `$\ket{-}$` of `$U_f$` with eigenvalue `$-1^{f(x)}$`. 
 - eigenvalue is encoded in phase of controll qubit using phase kickback
 - final hadamard gate collapses phase to basis states `$f(0) XOR f(1)$`
+
+Three options for `$U_f$`, `$U_f = CNOT$` (balanced), `$U_f = I$` (f(x) = 0) or `$U_f = \begin{pmatrix} 0 & 1 & 0 & 0 \cr 1 & 0 & 0 & 0 \cr  0 & 0 & 0 & 1 \cr 0 & 0 & 1 & 0\end{pmatrix}$` (f(x) = 1)
 
 #### Quantum Advantage
 simulation of quantum computers
