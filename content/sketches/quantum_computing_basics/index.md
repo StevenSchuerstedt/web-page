@@ -1,5 +1,5 @@
 ---
-title: Quantum Computing
+title: Quantum Computing Basics
 author: admin
 type: page
 date: 2021-10-14T16:36:38+00:00
@@ -179,6 +179,11 @@ $$ U ((p_0 \ket{0} + p_1 \ket{1})\ket{\psi}) = U (p_0 \ket{0}\ket{\psi} + p_1 \k
 - final hadamard gate collapses phase to basis states `$f(0) XOR f(1)$`
 
 Three options for `$U_f$`, `$U_f = CNOT$` (balanced), `$U_f = I$` (f(x) = 0) or `$U_f = \begin{pmatrix} 0 & 1 & 0 & 0 \cr 1 & 0 & 0 & 0 \cr  0 & 0 & 0 & 1 \cr 0 & 0 & 1 & 0\end{pmatrix}$` (f(x) = 1)
+
+#### Deutsch's Josza's Algorithm
+- generalization of Deutsch Algorithm to higher dimensions.
+- f now accepts arbitrary inputs of 0s and 1s
+- exponential speedup compared to classical algorithm
 
 #### Quantum Advantage
 simulation of quantum computers
