@@ -89,41 +89,53 @@ $$C(\textbf{x}) = \frac{1}{2} ( (1-(-1)^{x_1}(-1)^{x_2}) + (1-(-1)^{x_1}(-1)^{x_
 
 (five summands, as there are five edges)
 
-Now pluggin in values for `$\textbf{x}$` provides a according score. 
+Pluggin in values for `$\textbf{x}$` provides the according score, so in this case the number of edges being cut.
 
-TODO: construct hamiltonian with pauli z 
+In order to construct the hamiltonian of this cost function in an effective way, we look at the action of the pauli-z operator acting on a register of qubits. Therefore we need to "make the pauli-z" bigger, to fit the dimension of the input vector, so we use the tensorproduct (kronecker product) with the identity matrix.
 
-construct using tensor product with identity matrix (as diagonal matrix) and pauli z-matrix (to switch sign of specific entries?)
+$$Z_i = I \otimes ... Z_i \otimes ... \otimes I $$
 
+Where the Z gate appears at the ith position and only effects the ith qubit and there are as many identity matrizes as needed, to fit the size of the problem.
 
-c * ZIIIIIIII
+Similary 
 
-=> Fourier expansion of boolean function? pauli z gate implements parity, 
+$$Z_iZ_j = I \otimes ... Z_i \otimes ... Z_j \otimes...  \otimes I $$
+
+Now the Z operator acting on a register of qubits gives
+
+$$Z_i \ket{\textbf{x}} = (-1)^{x_i} \ket{\textbf{x}} $$
+
+So for example 
+
+$$IIZI \ket{0010} = -1 \ket{0010} $$
+
+(because this is an eigenstate with eigenvalue -1)
+
+The hamiltonian for the cost function is
+
+$$C = \frac{1}{2} \sum_{ij} (I - Z_i Z_j) $$
+
+In qiskit the sign is flipped and the constant terms (identity matrizes) are evaluated as an offset.
+
+$$-C = \frac{1}{2} \sum_{ij} (-I + Z_i Z_j) $$
+
+So four our five edge MaxCut example:
+
+$$-C = \frac{1}{2} \sum_{ij}-I + \frac{1}{2}\sum_{ij}Z_i Z_j $$
+$$-C = -2.5 I + \frac{1}{2}ZZII + \frac{1}{2}ZIIZ + \frac{1}{2}IZIZ + \frac{1}{2}IZZI + \frac{1}{2}IIZZ$$
+
+The factors in front of the pauli-z operators are called fourier coefficients.
+In general this representation can be achieved by using a fourier expansion on the original boolean function using multilinear polynomials, and then plugging in the fourier coefficients for the hamiltonian. (but calculating the fourier expansion is #P-hard)
+
+$$ f(x) = \sum_{S \in [n]} \hat f(S)x^S $$
+
+$$ C = \sum_{S \in [n]} \hat f(S) \prod_{j \in S} Z_j $$
 
 => cannot be efficiently computed (again np hard...) so use pseudo-boolean functions? (boolean function with boolean -> real ?)
 
 multilinear polynomial representation (why is it called fourier?)
 
-TODO:
-- concrete example
-- build hamiltonian explicitly using np.kron
 
-
-
-
-Encode Problem:
-
-
-Objective is now to find the maximum value of `$f(x)$` and the corresponding argument x.
-
-$$Objective: max f(x)$$
-
-f can be mapped to hamiltonian, with values of f for according input on diagonal.
-
-
-=> solution is largest eigenvalue eigenvector
-
-Ising (?) Spin variables <=> boolean variables (change of variables)
 
 `$ x_S \in \{ -1, 1 \}$` or `$x_B \in \{ 0,1 \}$` with coordinate transform `$x_S = (-1)^{x_B}$`
 
