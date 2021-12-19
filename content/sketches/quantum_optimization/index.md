@@ -79,7 +79,7 @@ Note: the sum goes only over all existing edge connections.
 
 Now lets look at a specific instance of the MaxCut problem as an example.
 
-{{< figure src="/maxcut.png" title="MaxCut" width="100%" >}}
+{{< figure src="/maxcut.png" title="MaxCut" width="50%" >}}
 
 The nodes can be in group 0 or 1. A bitstring like 0101 describes that the first node is in group 0, the second node in group 1 etc. (take care with ordering)
 
@@ -149,17 +149,37 @@ Variational Quantum Eigensolver
 => find lowest eigenvalues of Hamiltonian (= Ising?)
 
 
+### exponentiated matrix
+
+- defined over taylor series
+- exp(matrix) = some matrix
+- rotation?
+- exp von diagonal matrix
+- i?
+
+#### unitary operator
+
+write unitary operator in form e^iA, with A being Hermitian
+(unitary operator preserves probability amplitude)
+hamiltonian is a hermitian matrix so e^iH is a unitary?
+
 ### QAOA
 
 Quantum Approximate Optimization Algorithm
 
 - Algorithm for combinatorial optimization problems (e.g. MaxCut or TSP)
 
+- different paradigm than classical algorithms: only short computation on QC (because of errors), iterative with classical computer
+
 - determine starting angles `$\gamma$` and `$\beta$` ? (=> done by the algorithm?)
 
 - integer paramter p
 
-- problem hamiltonian? change problem description for QC?
+- problem hamiltonian (as defined above), mixer hamiltonian
+
+- exponentiated hamiltonian, exponentiated matrix ?
+
+- expectation value of hamiltonian?
 
 - QAOA needs Qubit Operator (Hamiltonian) this is implemented in Qiskit using adjacency matrix for graphs 
 

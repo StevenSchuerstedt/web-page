@@ -30,3 +30,5 @@ some ideas I want to follow sometime
 ### create own origami (box pleating, https://abrashiorigami.com/)
 
 ### Full Stack: CPU, Compiler, GUI (Abstraction ladder) => build compiler for SUBLEQ
+
+### schafkopf theorie video, KI
