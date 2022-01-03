@@ -57,7 +57,7 @@ Also note that `$p_0$` and `$p_1$` are in fact not probabilites, but probability
 
 => phase kickback
 
-{{< figure src="superposition.png" width="100%" >}}
+{{< figure src="/superposition.png" width="50%" >}}
 
 
 #### Bloch Sphere
