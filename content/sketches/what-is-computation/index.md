@@ -32,3 +32,41 @@ It reflects about what an algorithm is, what we do when we add two numbers etc. 
 => first mechanical calculaters, baggage, difference machine
 
 => computer uses circuits, boolean algebra, idea of universality
+
+### Gödel
+Formale Systeme:
+Starte mit irgendwas: 1 (Axiome)
+Regeln für Weiter: 1 -> 101 0 -> 011 (Schlussregeln)
+
+=> Aus den Axiomen können Dinge abgeleitet werden
+1 -> 101 -> 10111 -> ...
+Zwei Ebenen: - sytaktische Ebene, Symbole nach strikten Regeln manipulieren
+- semantische Ebene, Symbole (willkürliche) Bedeutung geben
+Interessant: Ebenen lassen sich verknüpfen! Regeln, Axiome können so gewählt werden das es tatstächlich Sinn ergibt.
+=> Prädikatenlogik, Principia Mathematica, TNT (GEB)
+Systeme sprechen über Mathematik, natürliche Zahlen. Lassen sich alle "richtige" Aussagen so darstellen, ableiten?
+Paeno Axiome für natürliche Zahlen
+
+Formales System um ÜBER natürliche Zahlen zu sprechen? Aber in wahrheit trugschluss, natürliche Zahlen sind ein formales System, im Grunde sind alle Formalen Systeme gleich, will über sich selber sprechen
+=> widerspruch, man kann nur bis zu einem bestimmten Grad über sich selber sprechen?
+
+Gödelisierung entscheidende Einsicht?
+Jede Formel die auf der semantischen Ebene über die natürlichen Zahlen spricht, lässt sich auch in sie übersetzen.
+=> Jedes Element in Zahl codieren
+=> jede Regel mit Zahlen manipulation darstellen
+=> Algebra auch nur ein "bedeutungsleeres" Formales System
+=> Formel ist gleichzeitig das was sie eigentlich sagen will? Kreisschluss?
+=> Formales System in ein anderes überführen?
+
+Aussagen über Formel sind so möglich,
+Formel 
+Ich bin unbeweisbar => Lügner Paradoxon
+ist eine vollkommen akzeptierbare Formel, aber schwierig, führt zu Widerspruch im Systeme
+
+http://us.metamath.org/mm_100.html zeigt, formale beweise sind möglich für vieles. (genauso in prinicipa mathematica gezeigt)
+
+vergleich: Sprache
+syntax einzelner Buchstaben vs. semantik eines wortes
+ein wort ist mehr als seine buchstaben, buchstaben sind willkürlich aneinandergereiht, woher kommt der sinn?
+ein satz ist mehr als seine wörter, sinn eines satzes? man kann jedes wort in einem satz verstehen, aber dennoch nicht den satz
+jedes wort verstehen vs das verstehen was jemand versucht zu sagen, was die wörter ausdrücken
