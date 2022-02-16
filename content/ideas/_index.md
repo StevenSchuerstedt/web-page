@@ -32,3 +32,5 @@ some ideas I want to follow sometime
 ### Full Stack: CPU, Compiler, GUI (Abstraction ladder) => build compiler for SUBLEQ
 
 ### schafkopf theorie video, KI
+
+### Bossa Nova mit Harmonien von Scriabin
