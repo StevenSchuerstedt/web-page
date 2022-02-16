@@ -34,3 +34,5 @@ some ideas I want to follow sometime
 ### schafkopf theorie video, KI
 
 ### Bossa Nova mit Harmonien von Scriabin
+
+### Rubics Cube mit Gruppentheorie (aber no free lunch, gruppentheorie genauso kompliziert zu lernen wie direkt rc solven)
