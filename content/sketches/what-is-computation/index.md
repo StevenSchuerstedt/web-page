@@ -58,7 +58,8 @@ Jede Formel die auf der semantischen Ebene über die natürlichen Zahlen spricht
 => Formel ist gleichzeitig das was sie eigentlich sagen will? Kreisschluss?
 => Formales System in ein anderes überführen?
 
-Gödel zeigt / bzw. erschafft Zusammenhang indem er seinen Blickwinkel verändert. Dieser Zusammenhang ist eigentlich schon die ganze Zeit da? Oder wird er erst erschaffen nachdem Gödel seine Subjektive sicht ändert? Objekt kann verändert werden, indem man nicht das Objekt verändert sondern seine Subjektive wahrnehmung verändert. 
+Gödel zeigt / bzw. erschafft Zusammenhang indem er seinen Blickwinkel verändert. Dieser Zusammenhang ist eigentlich schon die ganze Zeit da? Oder wird er erst erschaffen nachdem Gödel seine Subjektive sicht ändert? Objekt kann verändert werden, indem man nicht das Objekt verändert sondern seine Subjektive wahrnehmung verändert. => eigentlich nichts neues... siehe lehrer schüler lob/tadel experiment
+=> kindheitserfahrung: objekt unter bett, wenn ich nur fest genug daran glaube, mich selbst davon überzeuge, dann ist es nicht da
 
 Aussagen über Formel sind so möglich,
 Formel 
