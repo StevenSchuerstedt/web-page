@@ -60,7 +60,7 @@ Jede Formel die auf der semantischen Ebene über die natürlichen Zahlen spricht
 
 Gödel zeigt / bzw. erschafft Zusammenhang indem er seinen Blickwinkel verändert. Dieser Zusammenhang ist eigentlich schon die ganze Zeit da? Oder wird er erst erschaffen nachdem Gödel seine Subjektive sicht ändert? Objekt kann verändert werden, indem man nicht das Objekt verändert sondern seine Subjektive wahrnehmung verändert. => eigentlich nichts neues... siehe lehrer schüler lob/tadel experiment
 => kindheitserfahrung: objekt unter bett, wenn ich nur fest genug daran glaube, mich selbst davon überzeuge, dann ist es nicht da
-=> vgl. Quantum Mechanic, Messung mit Observer, Schrödinger eq. nicht richtig für messung
+=> vgl. Quantum Mechanic, Messung mit Observer, Schrödinger eq. nicht richtig für messung, könnte ein Gedanke/Geistezustand die Messung beeinflussen? (Ich stelle mir vor das Ergebnis der Messung wird x sein)
 
 Aussagen über Formel sind so möglich,
 Formel 
